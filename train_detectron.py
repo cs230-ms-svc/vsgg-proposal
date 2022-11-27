@@ -165,6 +165,7 @@ if __name__=="__main__":
     cfg = get_cfg()
     cfg.DATALOADER.NUM_WORKERS = 2
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml"))
+    cfg.OUTPUT_DIR = "models"
     cfg.DATASETS.TRAIN = ("action-genome-train",)
     cfg.DATASETS.TEST = ()
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
