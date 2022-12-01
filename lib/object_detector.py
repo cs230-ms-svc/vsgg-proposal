@@ -50,7 +50,7 @@ class detector(nn.Module):
         self.is_train = train
         self.use_SUPPLY = use_SUPPLY
         self.object_classes = object_classes
-        self.detectron = detectron("models")
+        self.detectron = detectron("models/model-final.pth")
     
     def forward(self, im_data, im_info, gt_boxes, num_boxes, gt_annotation, im_all):
         counter = 0
